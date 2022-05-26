@@ -26,7 +26,7 @@ class _ExampleFourState extends State<ExampleFour> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Api Course'),
+        title: const Text('Api Course'),
       ),
       body: Column(
         children: [
@@ -35,7 +35,7 @@ class _ExampleFourState extends State<ExampleFour> {
               future: getUserApi(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Text('Loading');
+                  return const Text('Loading');
                 } else {
                   return ListView.builder(
                       itemCount: data.length,

@@ -35,7 +35,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Api Course"),
+        title: const Text("Api Course"),
       ),
       body: Column(
         children: [
@@ -53,7 +53,7 @@ class _ExampleTwoState extends State<ExampleTwo> {
                       ),
                       subtitle: Text(snapshot.data![index].title_id.toString()),
                       title: Text(
-                          "Notes id: " + snapshot.data![index].id.toString()),
+                          "Notes id: ${snapshot.data![index].id}"),
                     );
                   });
             },

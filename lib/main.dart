@@ -1,9 +1,6 @@
-import 'package:apiseries/example_four.dart';
-import 'package:apiseries/example_two.dart';
-import 'package:apiseries/home_screen.dart';
+import 'package:apiseries/post/signup.dart';
+import 'package:apiseries/post/upload_images.dart';
 import 'package:flutter/material.dart';
-
-import 'ExampleThree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,13 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-    
         primarySwatch: Colors.blue,
       ),
-      home: ExampleFour(),
+      home: const UploadImageScreen(),
       // home:const HomeScreen(),
     );
   }
 }
-
- 

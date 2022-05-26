@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("api_Series")),
+      appBar: AppBar(title: const Text("api_Series")),
       body: Column(
         children: [
           Expanded(
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
               future: getPostApi(),
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
-                  return Text('Loading');
+                  return const Text('Loading');
                 } else {
                   return ListView.builder(
                       itemCount: postList.length,
@@ -52,14 +52,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   "Title",
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Text(postList[index].title.toString()),
-                                Text(
+                                const Text(
                                   "Description",
                                   style: TextStyle(
                                       fontSize: 15,

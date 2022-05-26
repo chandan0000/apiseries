@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'Model/UsersModel.dart';
+import '../Model/UsersModel.dart';
 
 class ExampleThree extends StatefulWidget {
   const ExampleThree({Key? key}) : super(key: key);
@@ -42,7 +42,7 @@ class _ExampleThreeState extends State<ExampleThree> {
             future: getUserApi(),
             builder: (context, AsyncSnapshot<List<UsersModel>> snapshoot) {
               if (!snapshoot.hasData) {
-                return CircularProgressIndicator();
+                return const CircularProgressIndicator();
               } else {
                 return ListView.builder(
                   itemCount: userList.length,
